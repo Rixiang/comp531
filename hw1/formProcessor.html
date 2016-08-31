@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta name="author" content="Xiang Li">
+
+</head>
+   
+<body onload="queryData()">
+	<h1>Key-value table</h1>
+	<table>
+		<tr><th>Account name</th>	<td id="actName"></td></tr>
+		<tr> <th>Email</th>	<td id="email"></td></tr>
+		<tr><th>Phone</th>	<td id="phone"></td></tr>
+		<tr><th>Date of birth</th>	<td id="dateOfBirth"></td></tr>
+		<tr><th>Zipcode</th>	<td id="zipCode"></td></tr>
+		<tr><th>Password</th>	<td id="password"></td> </tr>
+		<tr><th>Timestamp</th>	<td id="timestamp"></td></tr>
+	</table>
+</body>
+    
+<script>
+    function queryData() {   
+    	// convert timestamp 
+    	time = new Date(Number(document.getElementById("timestamp").innerHTML));
+   		document.getElementById("timestamp").innerHTML = time.toString();
+ 	}
+</script>

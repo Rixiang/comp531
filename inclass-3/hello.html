@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<body onload="set5s()">
+
+	<h1>About Me</h1>
+
+	<p>This page gives a brief introduction of myself. </p>
+
+	<p>My name is <b>Xiang Li</b>. I am currently pursuing a Master degree in Computer Science Department at Rice University, Houston, TX. Prior to my graduate study, I earned my Bachelor degree in Computer Engineering at Shanghai Jiao Tong University, China. </p>
+
+	<p>Beneath is a photo of myself. </p>
+
+	<img src="https://media.licdn.com/media/AAEAAQAAAAAAAAkLAAAAJDNkMWJjMDBjLWUyZmItNDU5MC04NTcxLTZkN2MwZTg2YjllMQ.jpg" width="150px" title="Myself">
+
+	<p>
+	For more information about me, you can explore more details on my <a href="https://www.facebook.com/profile.php?id=100008758269336" title="go here">facebook homepage</a>. 
+</p>
+
+<form>
+		<p>
+		If you have any comments on this webpage, please leave it as follows:
+		</p>
+		<textarea id="commentArea" rows="5" cols="70">
+		</textarea>
+		<input type="button" value = "Clear" onclick="clearCommentArea()"> 
+		<br/>
+		<input type="button" value="Submit">
+	</form>
+	<p><span id="indicator" style="color:blue;font-weight:bold">15 seconds left</span></p>
+	<input type="button" value="Pause" onclick="pause()">
+	<input type="button" value="Continue" onclick="resume()">
+
+</body>
+
+
+<script type="text/javascript">
+	var numSecondLeft = 14;
+	var startTime = new Date();
+	var remaining = 1000;
+	var interval = setInterval(update, 1000);
+
+	function clearCommentArea(){
+		document.getElementById("commentArea").value = '';
+	}
+
+	function set5s(){
+		setTimeout(function(){ alert('the page will redirect when the counter reaches zero'); }, 5000);
+	}
+
+	function update(){
+		var indicator = document.getElementById("indicator");
+		indicator.innerHTML = numSecondLeft + " seconds left";
+		
+		if (numSecondLeft === 0){
+			location = "http://www.clear.rice.edu/comp431/sample/hello.html";
+			clearInterval(interval);
+		}
+		numSecondLeft--;
+	}
+
+	function pause(){
+		remaining = remaining - (new Date() - startTime);
+		clearInterval(interval);
+	}
+
+	function resume(){
+		startTime = new Date();
+		setTimeout(function(){}, remaining % 1);
+		interval = setInterval(update, 1000);
+		remaining = 1000;
+	}
+	
+</script>
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<h1>
+	Pizza Order Form
+</h1>
+
+<img src="http://pizzaconnectionjohnr.com/wp-content/uploads/2014/07/pizzeria-hazel-park-pizza-connection-s2.jpg" title="pizza" width=300>
+
+<body>
+	<form name="pizzaOrder">
+		<p>
+			Name: <input type="text" name="name" placeholder="your name">
+		</p>
+		<p>
+			Address: <input type="text" name="address" placeholder="#### Street Name">
+		</p>
+		<p>
+			Phone Number: <input type="text" name="phoneNumber" pattern='^[0-9]+$' placeholder="number[0-9] only">
+		</p>
+
+		<p>
+			Pizza size:
+			<br/>
+			<input type="radio" name="size" id="large">Large
+			<input type="radio" name="size" id="medium">Medium
+			<input type="radio" name="size" id="small">Small
+		</p>
+
+		<p>
+			Pizza Toppings:
+			<br/>
+			<input type="checkbox" name="topping" value="sausage">Sausage&nbsp
+			<input type="checkbox" name="topping" value="pepperoni">Pepperoni&nbsp
+			<input type="checkbox" name="topping" value="olives">Olives&nbsp
+			<input type="checkbox" name="topping" value="anchovies">Anchovies&nbsp
+			<input type="checkbox" name="topping" value="onions">Onions&nbsp
+		</p>
+
+		<p>
+			<input type="button" name="place_order" value="Place Order">
+			<input type="reset" value = "Clear"> 
+		</p>
+			<input type="submit" value="Submit" onclick="return validateForm()">
+
+	</form>
+
+	
+</body>
+
+<script type="text/javascript">
+
+		function validateForm(){
+			var nameValue = document.forms["pizzaOrder"]["name"].value;
+			var addressValue = document.forms["pizzaOrder"]["address"].value;
+			var phoneNumValue = document.forms["pizzaOrder"]["phoneNumber"].value;
+			var largeChecked = document.getElementById("large").checked;
+			var mediumChecked = document.getElementById("medium").checked;
+			var smallChecked = document.getElementById("small").checked;
+
+    		if (nameValue == null || nameValue == "") {
+        		alert("Name must be filled out");
+        		return false;
+    		}if (addressValue == null || addressValue == "") {
+        		alert("Address must be filled out");
+        		return false;
+    		}if (phoneNumValue == null || phoneNumValue == "") {
+        		alert("Phone number must be filled out");
+        		return false;
+    		}if (largeChecked == false && mediumChecked == false && smallChecked == false) {
+        		alert("Pizza size must be selected!");
+        		return false;
+    		}else
+    			return true;
+		}
+
+	</script>
