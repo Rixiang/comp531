@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+	<meta name="author" content="Xiang Li">
+    <meta charset="utf-8" />
+	<title>Rice Book -- Profile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="profile.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<h1>Profile</h1>
+
+	<div>
+	<table
+		<tr>
+			<th class="firstColumn">
+				Entries
+			</th>
+			<th class="secondColumn">
+				New value
+			</th>
+			<th class="thirdColumn">
+				Current value
+			</th>
+		<tr>
+		<tr>
+			<td>
+				Display name:
+			</td>
+			<td>
+				 <input type="text" name="displayName" id="displayNameValue" class="profileText" placeholder="(Optional) please enter a name to display">
+			</td>
+			<td>
+				<span id ="displayName">
+				</span>
+			</td>
+		<tr>
+			<td>
+				E-mail:
+			</td>
+			<td>
+				<input type="email" name="emailAddr" id="emailAddr" class="profileText" placeholder="Please enter an email address">
+			</td>
+			<td>
+				<span id="email">
+				</span>
+			</td>
+		<tr>
+			<td>
+			Phone Number: 
+			</td>
+			<td>
+				<input type="text" name="phoneNumber" id="phoneNumber" class="profileText" pattern='^[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]$' placeholder="e.g. 713-348-6000" title="Numbers[0-9] and - only, e.g. 713-348-6000"> 
+			</td>
+			<td>
+				<span id="phoneNum">
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Zip code: 
+			</td>
+			<td>
+				<input type="text" name="zipCode" id="zipCodeValue" class="profileText" pattern='^[0-9][0-9][0-9][0-9][0-9]$' placeholder="e.g. 77005" title="Numbers[0-9] only e.g. 77005">
+			</td>
+			<td>
+				<span id="zipCode">
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Password:
+			</td>
+			<td>
+				<input type="password" name="password" id="pwdValue" class="profileText" placeholder="Please set an password ">
+			</td>
+			<td>
+				<span id="pwd">	
+				</span>
+			</td>
+		<tr>
+			<td>
+				Password Confirmation: 
+			</td>
+			<td>
+				<input type="password" name="passwordConf" id="pwdConfValue" class="profileText" placeholder="Please re-enter the password ">
+			</td>
+			<td>
+				<span id="pwdConf">	
+				</span>
+			</td>
+		</table>
+		<div id="buttons">
+			<input type="submit" value="Update" id="submit">
+			<input type="button" value="Return" id="return">
+		<div>
+	</div>
+</body>
