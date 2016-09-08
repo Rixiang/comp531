@@ -33,8 +33,6 @@ window.onload = function(){
 					   document.getElementById("pwdValue"), 
 					   document.getElementById("pwdConfValue")];
 
-	var submit = document.getElementById("submit");
-
 	// determine which entries are changed, alert users, and change the values shown on the page
 	var changeAlert = function(item, index){
 		if (index <= 3){
@@ -43,6 +41,9 @@ window.onload = function(){
 				alert("The display name is changed from " + item.innerHTML + " to " + entryValues[index].value);
 				item.innerHTML = entryValues[index].value;
 				entryValues[index].value = "";
+				} else{
+					alert("Please enter a new information");
+					entryValues[index].value = "";
 				}
 			}
 		}else if (index == 5){	// this part is for passwords, and note that alert once is enough			
@@ -67,7 +68,7 @@ window.onload = function(){
 	}
 
 	var validateEmail = function(){
-		var pattern = new RegExp("^([\w-\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})$");
+		var pattern = new RegExp("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$");
 		var isValid = pattern.test(entryValues[1].value);
 		if (!isValid){
 			alert("In e-mail field, please enter a valid e-mail address , e.g. skotep@rice.edu");
@@ -99,19 +100,21 @@ window.onload = function(){
 		var zipCodeIsValid = true;
 		if (entryValues[1].value != null && entryValues[1].value != ""){
 			emailIsValid = validateEmail();
-		} else if (entryValues[2].value != null && entryValues[2].value != ""){
+		} 
+		if (entryValues[2].value != null && entryValues[2].value != ""){
 			phoneIsValid = validatePhone();
-		} else if (entryValues[3].value != null && entryValues[3].value != ""){
+		} 
+		if (entryValues[3].value != null && entryValues[3].value != ""){
 			zipCodeIsValid = validateZipCode();
 		}
 
-		if (phoneIsValid && phoneIsValid && zipCodeIsValid){
+		if (emailIsValid && phoneIsValid && zipCodeIsValid){
 			entries.forEach(changeAlert);
 			return true;
 		}else{
 			return false;
 		}
 	}
-
+	var submit = document.getElementById("submit");
 	submit.addEventListener("click", validate, false);
 }
