@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta name="author" content="Xiang Li">
+    <title>Landing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>    
+</head>
+
+<body>
+
+    <div class="jumbotron text-center">
+        <h1>Welcome to Rice Book</h1>
+    </div>
+
+    <div class="container">
+        <div>
+            <form name="accountRegisteration" class="form-horizontal col-sm-6" id="signOnForm">
+            <h2 class="form-signup-heading col-sm-offset-3">Please sign up!</h2>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Account name:</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="accountName" class="form-control"  pattern='^[A-Za-z][A-Za-z0-9]*$'  placeholder="Letters and numbers, but may not start with a number" title="Letters and numbers only, and may not start with a number">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Display name:</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="displayName" class="form-control" placeholder="(Optional) please enter a name to display">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Email address:</label>
+                    <div class="col-sm-6">
+                        <input type="email" name="emailAddr" class="form-control" placeholder="Please enter an email address">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Phone Number:</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="phoneNumber" class="form-control" pattern='^[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]$' placeholder="e.g. 713-348-6000" title="Numbers[0-9] and - only, e.g. 713-348-6000">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Date of Birth:</label>
+                    <div class="col-sm-6">
+                        <input type="date" name="dateOfBirth" class="form-control" min="1900-01-01" max="1998-08-31"  placeholder="Only 18 years or older can register">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Zip code:</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="zipCode" class="form-control" pattern='^[0-9][0-9][0-9][0-9][0-9]$' placeholder="e.g. 77005" title="Numbers[0-9] only e.g. 77005">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Password:</label>
+                    <div class="col-sm-6">
+                        <input type="password" name="password" class="form-control" placeholder="Please set an password ">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Confirm Password:</label>
+                    <div class="col-sm-6">
+                        <input type="password" name="passwordConf" class="form-control" placeholder="Please re-enter the password ">
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-primary col-sm-offset-4" value="Submit" id="signOn">
+                <input type="reset" class="btn btn-primary col-sm-offset-1" value = "Clear">
+                <p><input type="hidden" name="Timestamp" id="timestamp"></p> 
+                <div class="col-sm-2">
+                </div>
+            </form> 
+        </div>
+
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-4">
+                <h2 class="form-signin-heading col-sm-offset-2">Please log in!</h2>
+                <p>
+                    <input type="text" id="inputAccount" class="form-control" placeholder="Account Number" required>
+                </p>
+                <p>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                </p>
+                <button class="btn btn-primary btn-primary btn-block" type="submit" id="logIn">Sign in</button>
+        </div>
+
+        <div class="col-sm-1"></div>
+
+    </div>
+
+    <footer class="container-fluid text-center">
+        <p>RiceBook &copy 2016</p>
+        <p>Contact: xiang.li@rice.edu</p>
+    </footer>
+
+</body>
+

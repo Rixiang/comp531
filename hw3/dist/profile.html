@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+	<meta name="author" content="Xiang Li">
+    <meta charset="utf-8" />
+	<title>Rice Book -- Profile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="profile.js"></script>
+</head>
+
+<body>
+	<!-- head-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand active">Ricebook</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="main.html">Home</a></li>
+                    <li class="active"><a>Profile</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="logOut"><span class="glyphicon glyphicon-user"></span> Log out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+	<div class="container">
+
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-4">
+            <p><img src="bird.jpg" class="img-rounded user"></p>
+            <div class="col-sm-8">
+            	<input type="file" class="form-control" id="uploadPhoto" value="Upload your photo">
+            </div>
+            <div class="col-sm-4">
+            </div><br/><br/>
+            <p><h2 class="form-signin-heading">Current Info</h2></p>
+            <label class="control-label col-sm-12"><span id ="displayName"></span></label>
+            <label class="control-label col-sm-12"><span id="email"></span></label>
+            <label class="control-label col-sm-12"><span id="phoneNum"></span></label>
+            <label class="control-label col-sm-12">01-01-1989</label>
+            <label class="control-label col-sm-12"><span id="zipCode"></span></label>
+            <label class="control-label col-sm-12"><span id="pwd"></span></label> 
+			<label class="control-label col-sm-12"><span id="pwdConf"></span></label>       
+        </div>
+
+		<div>
+            <form name="accountRegisteration" class="form-horizontal col-sm-6" id="signOnForm">
+            	<h2 class="form-signup-heading col-sm-offset-3">Update your info</h2>
+            	</br> 
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Display name:</label>
+                    <div class="col-sm-6">
+                        <input type="text" id="displayNameValue"  class="form-control" placeholder="(Optional) please enter a name to display">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Email address:</label>
+                    <div class="col-sm-6">
+                        <input type="email" id="emailAddr" class="form-control" placeholder="Please enter an email address">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Phone Number:</label>
+                    <div class="col-sm-6">
+                        <input type="text" id="phoneNumber" class="form-control" pattern='^[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]$' placeholder="e.g. 713-348-6000" title="Numbers[0-9] and - only, e.g. 713-348-6000">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Zip code:</label>
+                    <div class="col-sm-6">
+                        <input type="text" id="zipCodeValue" class="form-control" pattern='^[0-9][0-9][0-9][0-9][0-9]$' placeholder="e.g. 77005" title="Numbers[0-9] only e.g. 77005">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Password:</label>
+                    <div class="col-sm-6">
+                        <input type="password" id="pwdValue" class="form-control" placeholder="Please set an password ">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Confirm Password:</label>
+                    <div class="col-sm-6">
+                        <input type="password" id="pwdConfValue"  class="form-control" placeholder="Please re-enter the password ">
+                    </div>
+             
+                </div>
+                <div class="col-sm-8 col-sm-offset-2">
+                        <input type="submit" class="btn btn-primary btn-block " value="Submit" id="submit">
+                    </div>
+                <div class="col-sm-2">
+                </div>
+            </form> 
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+
+</body>
