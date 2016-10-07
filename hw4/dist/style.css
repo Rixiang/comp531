@@ -1,0 +1,68 @@
+h1 {
+	text-align: center;
+}
+
+button {
+	 margin: auto; 
+	 display: inline;
+}
+
+.btn {
+	width: 12%;
+	margin: auto;
+}
+
+.level {
+	text-align: center;
+}
+
+.score-board {
+    text-align: center;
+}
+
+.player {
+	width: 12%;
+    display: inline-block;
+    padding: 10px;
+}
+
+.score-box {
+    border: 2px solid black;
+    padding: 10px;
+    color: #2CB3C9;
+}
+
+#board {
+  border
+  margin:3.75em auto 1.25em auto;  
+}
+
+table {
+	max-width:600px;
+  	min-width:320px;
+	height: 100%;
+	margin: 0 auto;
+	border-style: solid;
+	border-collapse: collapse;
+	background: #adf1f7;
+}
+
+#table1 {
+	max-width:450px;
+  	min-width:240px;
+	border-bottom: hidden;
+}
+
+#table3 {
+	max-width:450px;
+  	min-width:240px;
+	border-top: hidden;
+}
+
+td {
+	width: 50px;
+	height: 50px;
+  	overflow: hidden;
+    border-style: solid;
+}
+
