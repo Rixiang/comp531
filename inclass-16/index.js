@@ -10,8 +10,10 @@ var articles = {articles:[
 const addArticle = (req, res) => {
     console.log('Payload received', req.body) 
     let id = articles.articles.length + 1;
-    articles.articles.push({id:id, author: 'Xiang', text: req.body.body});   
-    res.send(req.body)
+    articles.articles.push({id:id, author: 'Xiang', text: req.body.body});  
+    let thisArticle = articles.articles[id-1];
+    let thisArticles = {articles: [thisArticle]};
+    res.send(thisArticles);
 }
 
 const getArticles = (req, res) => {
