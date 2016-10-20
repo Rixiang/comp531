@@ -1,0 +1,1 @@
+test.sh is used to automically test the get/put methods of my server, using curl.
