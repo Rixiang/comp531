@@ -39,14 +39,14 @@ const validatePassword = () => {
 	}
 }
 
-export const signOnFunc = (dispatch) => {
+export const signOnFunc = (dispatch, event) => {
+	event.preventDefault(); // prevent automatically redirect to the landing page immediately after the form is submitted
 	if (validateSignOn() == false){
-		dispatch({ type: 'errorRegister' });
-	} else if (validateSignOn() == true && validatePassword() == false){
-		dispatch({type: 'errorPwdRegister'});
-	}
-	else {
+		return dispatch({ type: 'errorRegister' });
+	}else if (validatePassword() == false){
+		return dispatch({ type: 'errorPwdRegister' });
+	}else {
 		document.getElementById("signOnForm").method = "get";
-		dispatch({ type: 'normalRegister' });
+		return dispatch({ type: 'normalRegister' });
 	}
 }

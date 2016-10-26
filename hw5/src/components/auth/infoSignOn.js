@@ -25,7 +25,8 @@ const InfoSignOn = ({ hasError, success, hasPwdError }) => {
 	}
 }
 
-const mapStateToProps = state => ({ hasError: state.register.hasErrorSignOn, success: state.register.successSignOn, hasPwdError: state.register.hasPwdErrorSignOn });
+const mapStateToProps = state => ({ hasError: state.register.hasErrorSignOn, 
+		success: state.register.successSignOn, hasPwdError: state.register.hasPwdErrorSignOn });
 
 export default connect(mapStateToProps, null)(InfoSignOn);
 

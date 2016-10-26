@@ -77,10 +77,11 @@ const validate = () => {
 	}
 }
 
-export const updateProfile = (dispatch) => {
+export const updateProfile = (dispatch, event) => {
+	event.preventDefault(); // prevent automatically redirect to the landing page immediately after the form is submitted
 	if (validate()){
 		return dispatch({ type: 'normalUpdate' });
-	}else if (validate() == false) {
+	}else{
 		return dispatch({ type: 'errorUpdate' });
 	}
 }

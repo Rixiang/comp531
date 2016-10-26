@@ -20,16 +20,3 @@ render(
     </Provider>,
     document.getElementById('app')
 );
-
-/*
-window.onload = function(){
-
-    window.addEventListener("load", addTimeStamp);
-
-    function addTimeStamp(){
-        // add timestamp
-        var timestamp = new Date().getTime();
-        document.getElementById("timestamp").value = timestamp;
-    }    
-}
-*/
