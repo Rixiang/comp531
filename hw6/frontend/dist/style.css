@@ -1,0 +1,39 @@
+/* style sheet for main.html */
+
+h1 {
+	color: white;
+	text-align: center;
+}
+
+
+td.posts:hover {
+	background: #80dfff;	
+	cursor: pointer;
+}
+
+footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+img.friend {
+	width: 80%;
+	height: 80%;
+}
+
+img.ys {
+    width: 90%;
+    height: 60%;
+}
+
+img.user{
+	width: 70%;
+	height: 70%;
+}
+
+
