@@ -1,6 +1,6 @@
 'use strict'
 
-const uploadImage = require('./uploadCloudinary').uploadImage;
+const uploadImage = require('./uploadCloudinary');
 
 var headlines = {headlines:[
 	{username: 'xl68', headline: 'one headline'}]};
