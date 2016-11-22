@@ -1,0 +1,17 @@
+1. Why do I love this course?
+
+The course material is awesome. Like you said in class, I thought it's just a web development course at the very beginning, but later I realized how wrong I was. Front-end development is also very challenging. All these up-to-date technologies, ES6, Node.js, React/Redux, back-end services, are really really fiscinating. 
+
+The web application we have been building is the best project experience I have ever had (I definitely put it on the top of my resume).
+
+The presentation/paper part is also great. The best opportunity for me to know more about the web development ecosystem and these emerging complicated stuffs.
+
+
+2. What could be improved?
+
+When I was first in touch with modern JS, all these stuff I did in in-class exercises (webpack, node modules, etc.) kind of make me confused. Make it slower at the beginning would be very helpful, since there are too much stuff to get familiar.
+
+Analougously, it's really a huge difference between inclass-10/inclass-11 and HW5/HW6. To fill out the gap, it does take me too much time. What about dividing HW5 into two homeworks, thus the first one could make students more familiar with React/Redux stuff.
+
+One very important part is that how to slow down a bit during class time. I remember once you explained each line of code very detailtedly, in a back-end class. That time we followed you pretty well. Otherwise, sometiems I have to go over your provided code in class again to figure out what you mean.
+
